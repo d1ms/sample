@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="590.0" prefWidth="512.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Game">
+   <children>
+
+      <Pane fx:id="morewindow" layoutY="0.0" prefHeight="600.0" prefWidth="512.0">
+         <children>
+            <TableView fx:id="tableView" editable="true" layoutX="-4.0" layoutY="5.0" prefHeight="612.0" prefWidth="529.0" styleClass="tableview" tableMenuButtonVisible="false">
+               <columns>
+                  <TableColumn fx:id="columnNumber" prefWidth="161.0" sortable="false" text="№" />
+                  <TableColumn fx:id="columnRecord" prefWidth="170.0" sortable="false" text="record" />
+                  <TableColumn fx:id="columnName" prefWidth="195.0" sortable="false" text="name" />
+               </columns>
+            </TableView>
+            <Button layoutX="190.0" layoutY="500.0" mnemonicParsing="false" onAction="#closendow" text="Back to game">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+
+      <Pane fx:id="mainwindow" layoutX="0.0" layoutY="0.0" prefHeight="610.0" prefWidth="530.0">
+         <children>
+         <Separator layoutX="19.0" layoutY="521.0" prefHeight="0.0" prefWidth="491.0" />
+         <Slider id="slider" fx:id="slider" blockIncrement="1.0" layoutX="15.0" layoutY="553.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="1" onDragExited="#cngSpeed" onKeyReleased="#cngSpeed" onMouseClicked="#cngSpeed" onMouseDragExited="#cngSpeed" onMouseDragOver="#cngSpeed" onMouseDragReleased="#cngSpeed" onTouchMoved="#cngSpeed" showTickLabels="true" value="5.5" />
+         <Button id="button" fx:id="butn" layoutX="377.0" layoutY="540.0" mnemonicParsing="false" onAction="#newGame" prefHeight="39.0" prefWidth="121.0" text="New Game">
+            <font>
+               <Font name="Segoe UI Black" size="18.0" />
+            </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         <Label fx:id="text" layoutX="238.0" layoutY="550.0" onMouseClicked="#showWindow" prefHeight="19.0" prefWidth="67.0" text="Record:" underline="true">
+            <font>
+               <Font name="Segoe UI" size="15.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Label>
+         <Label fx:id="rating" layoutX="297.0" layoutY="550.0" prefHeight="17.0" prefWidth="81.0" style="-fx-text-fill: green;" text="241" textFill="#59cd5f">
+            <font>
+               <Font name="Segoe UI" size="15.0" />
+            </font>
+         </Label>
+         <Label fx:id="text1" alignment="CENTER" layoutX="48.0" layoutY="531.0" prefHeight="19.0" prefWidth="74.0" style="-fx-text-alignment: center;" text="Speed" textAlignment="CENTER">
+            <font>
+               <Font name="Segoe UI" size="14.0" />
+            </font>
+         </Label>
+         <Canvas fx:id="canvas" height="500.0" layoutX="12.0" width="500.0" />
+         <Label fx:id="showText" alignment="CENTER" layoutX="107.0" layoutY="227.0" prefHeight="66.0" prefWidth="305.0" styleClass="alert" text="For control the snake using key: W,A,S,D" />
+         <Button fx:id="start" layoutX="384.0" layoutY="540.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="114.0" text="Start" visible="false">
+            <font>
+               <Font name="Segoe UI" size="18.0" />
+            </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+         </Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>

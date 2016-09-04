@@ -1,0 +1,57 @@
+Pane {
+    -fx-background-color: #ffffff;
+}
+
+Button {
+    -fx-background-color:
+            #090a0c,
+            linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+            linear-gradient(#20262b, #191d22),
+            linear-gradient(#20262b, #191d22);
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 15px;
+    -fx-padding: 10 20 10 20;
+    -fx-font-weight: 500;
+}
+
+Slider {
+    -fx-background-color:null;  /* Hide the track */
+    -fx-background-insets: 1 0 -1 0, 0, 1;
+    -fx-background-radius: 2.5, 2.5, 1.5;
+    -fx-padding: 0.208333em; /* 2.5 */
+
+}
+
+Label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+.alert{
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+    -fx-background-color: #feffef;
+    -fx-background-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 10px;
+}
+.tableview {
+    -fx-table-cell-border-color: transparent;
+}
+
+.tableview .table-cell {
+    -fx-alignment: CENTER;
+    -fx-border-width: 0px;
+    -fx-font-size: 19px;
+    -fx-font-family: "Segoe UI Light";
+}
+
+.tableview .table-row-cell:odd {
+    -fx-background-color: #cccccc;
+}
